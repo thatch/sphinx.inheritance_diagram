@@ -16,11 +16,25 @@
 
 This is a patched version of [`sphinx.ext.inheritance_diagram`](https://github.com/sphinx-doc/sphinx).
 
+This package is required, if inheritance diagrams (e.g. `sphinx.ext.inheritance_diagram`)
+are enabled in Sphinx **AND** Sphinx is used with our patched variation of
+`sphinx.ext.graphviz` called [`btd.sphinx.graphviz`](https://github.com/buildthedocs/sphinx.graphviz).
+In this example, `inheritance_diagram` has an internal cross reference to
+`graphviz`, which cannot be satisfied, because the graphviz extension has been
+exchanged.
+
+
+> **Note:**  
+> Patched versions of internal packages from Sphinx are released as M.M.P.postN
+> versions. So `2.3.1.post1` is the patched module version derived from Sphinx
+> `2.3.1`.
+
 --------------------
 
 ## Added features
 
-* TBD
+* `2.3.1.post1`
+  * Changed dependencies `sphinx.ext.graphviz` to `btd.sphinx.graphviz`.
 
 --------------------
 
