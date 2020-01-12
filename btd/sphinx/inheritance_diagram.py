@@ -51,7 +51,7 @@ import sphinx
 from sphinx import addnodes
 from sphinx.application import Sphinx
 from sphinx.environment import BuildEnvironment
-from sphinx.ext.graphviz import (
+from btd.sphinx.graphviz import (
     graphviz, figure_wrapper,
     render_dot_html, render_dot_latex, render_dot_texinfo
 )
@@ -457,7 +457,7 @@ def skip(self: nodes.NodeVisitor, node: inheritance_diagram) -> None:
 
 
 def setup(app: Sphinx) -> Dict[str, Any]:
-    app.setup_extension('sphinx.ext.graphviz')
+    app.setup_extension('btd.sphinx.graphviz')
     app.add_node(
         inheritance_diagram,
         latex=(latex_visit_inheritance_diagram, None),
